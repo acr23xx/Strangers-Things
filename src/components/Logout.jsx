@@ -1,31 +1,14 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
-function Logout() {
-  return (
-    <div>Logout</div>
-  )
+export default function Logout({ setToken, setCurrentUser }) {
+  const navigate = useNavigate();
+  useEffect(() => {
+    localStorage.removeItem("token");
+    setToken(null);
+    setCurrentUser(null);
+    navigate("./components/HomePage");
+  });
+
+  return;
 }
-
-export default Logout
-// import {useState, React} from 'react'
-
-// const Logout = ({setToken}) => {
-//   const [username, setUsername] = useState("");
-//   const log = () => {
-//     setUsername('')
-//     localStorage.removeItem('token')
-//     setToken('')
-//   }
-
-// console.log("setUserName is currently showing:", setUsername)
-
-//   return (
-//     <div onClick={log}>Logout</div>
-//   )
-// }
-
-// console.log("setUserName is currently showing:", username)
-
-// export default Logout
-
-//------------------------------------------------------------------------------------------------Stopped in this file---------------------------------------------------------------------------------------------------------------------

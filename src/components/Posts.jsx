@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { fetchPosts } from "../api/apiposts";
 
+import SinglePost from "./SinglePost";
+
 function Posts() {
   const [posts, setPosts] = useState([]);
 
@@ -12,8 +14,19 @@ function Posts() {
     getAllPost();
   }, []);
 
+  // const renderPosts = posts.map((post) => {
+  //   return <singlePost post={post} />;
+  // });
+
+  // const postID = posts.map.id;
+
+  // const handleClick = async (postID) => {
+  //   await delete (localStorage.id, postID);
+  // };
+
   return (
-    <>
+    <div>
+      <h1> Posts</h1>
       {posts.map((post, index) => {
         console.log(posts);
         return (
@@ -29,7 +42,7 @@ function Posts() {
           </h4>
         );
       })}
-    </>
+    </div>
   );
 }
 export default Posts;

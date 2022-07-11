@@ -1,0 +1,88 @@
+body {
+  margin: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  height: 15px;
+  color: navy;
+  align-items: center;
+  text-align: center;
+}
+
+.Navigation:link {
+  color: black;
+}
+
+.Navigation:visited {
+  color: powderblue;
+}
+
+.Navigation:hover {
+  color: green;
+}
+
+.Navigation:active {
+  color: red;
+}
+
+.Navigation {
+  background-color: tan;
+  display: flex;
+  flex-direction: row;
+  color: black;
+  height: 30px;
+  justify-content: space-evenly;
+  align-items: center;
+  border: solid black 2px;
+  border-radius: 0.5em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+}
+
+input {
+  height: 75px;
+  width: 50%;
+  border-radius: 0.5em;
+  margin: 0.3%;
+}
+
+input[type="checkbox"] {
+  width: 25%;
+  align-content: flex-start;
+  display: flex;
+  transform: scale(0.5);
+  align-content: flex-start;
+}
+
+.Description {
+  font-size: 20px;
+}
+
+input::placeholder {
+  color: red;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+}
+
+label {
+  margin-top: 15px;
+  font-size: 25px;
+  width: 25%;
+  height: 50%;
+  margin-left: 2%;
+}
+
+span {
+  display: flex;
+}
+
+button {
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+}

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-
+import { Register } from "components";
 import { loginUser } from "../api/auth";
 
-export default function Register({ setToken }) {
+function Login({ setToken }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -32,6 +32,9 @@ export default function Register({ setToken }) {
         />
         <button type="submit">Submit!</button>
       </form>
+      <Register setToken={setToken} />
     </div>
   );
 }
+
+export default Login;
